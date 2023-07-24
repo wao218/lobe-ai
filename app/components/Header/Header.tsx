@@ -2,16 +2,34 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import styles from "./header.module.scss";
 import { HeaderNavLink } from "./HeaderNavLink";
+
+enum NavPageTitles {
+  OVERVIEW = "Overview",
+  EXAMPLES = "Examples",
+  TOUR = "Tour",
+  BLOG = "Blog",
+}
+
+enum Routes {
+  HOME = "/",
+  EXAMPLES = "/examples",
+  TOUR = "/tour",
+  BLOG = "/blog",
+}
+
 export function Header(): JSX.Element {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.header}>
         <Logo />
         <nav className={styles.headerNav}>
-          <HeaderNavLink title="Overview" href="/" />
-          <HeaderNavLink title="Examples" href="/examples" />
-          <HeaderNavLink title="Tour" href="/tour" />
-          <HeaderNavLink title="Blog" href="/blog" />
+          <HeaderNavLink title={NavPageTitles.OVERVIEW} href={Routes.HOME} />
+          <HeaderNavLink
+            title={NavPageTitles.EXAMPLES}
+            href={Routes.EXAMPLES}
+          />
+          <HeaderNavLink title={NavPageTitles.TOUR} href={Routes.TOUR} />
+          <HeaderNavLink title={NavPageTitles.BLOG} href={Routes.BLOG} />
         </nav>
         <div>
           <button className={`${styles.button} ${styles.downloadButton}`}>
