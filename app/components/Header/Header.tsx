@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { Logo } from "./Logo";
 import styles from "./header.module.scss";
 import { HeaderNavLink } from "./HeaderNavLink";
+import { Logo } from "./Logo";
 
 enum NavPageTitles {
   OVERVIEW = "Overview",

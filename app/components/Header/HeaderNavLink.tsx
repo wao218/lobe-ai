@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import styles from "./header.module.scss";
-import { usePathname, useRouter } from "next/navigation";
+
 export function HeaderNavLink({
   title,
   href,
