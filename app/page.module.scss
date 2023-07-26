@@ -1,0 +1,124 @@
+.content {
+  height: 100%;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+.heroContainer {
+  min-height: calc(100vh - 80px);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 1144px;
+  margin: 0 64px;
+  transform: translateY(-45px);
+}
+
+.heroLeft {
+  z-index: 2;
+}
+
+
+
+.sectionHeading {
+  font-size: 80px;
+  line-height: 1.06;
+  margin-bottom: 12px;
+  font-weight: 900;
+  cursor: default;
+}
+
+.heroTrainText {
+  transform: translateX(-14px);
+}
+
+.hero .sectionHeading span {
+  display: inline-block;
+}
+
+.sectionHeadingGreen {
+  color: rgb(4, 221, 178);
+}
+
+.sectionText {
+  cursor: default;
+  position: relative;
+  font-size: 32px;
+  line-height: 1.45;
+  margin-bottom: 40px;
+  max-width: 850px;
+  color:  rgb(51, 51, 51);
+}
+
+.hero .sectionText {
+  max-width: 540px;
+}
+
+.heroButton {
+  display: flex;
+}
+
+.largeDownloadButton {
+  width: 200px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: rgb(4, 221, 178);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 10px 20px -8px transparent;
+}
+
+.largeDownloadButton:hover {
+  color: rgb(255, 255, 255);
+  transform: scale3d(1.05, 1.05, 1.05);
+  text-decoration: none;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+}
+
+.heroButton .largeDownloadButton {
+  margin-right: 12px;
+}
+
+.largeDownloadButtonOutline {
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 221, 178);
+  margin-left: 12px;
+}
+
+.largeDownloadButtonOutline:hover {
+  color: rgb(4, 221, 178);
+  box-shadow: 0 20px 40px -20px transparent;
+}
+
+
+.heroVideoContainer {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  overflow: visible;
+  margin-right: -48px;
+}
+
+.heroVideoContainer .heroVideo {
+  position: absolute;
+  display: block;
+  left: -150px;
+  top: -150px;
+  width: 680px;
+  max-width: 680px;
+}
