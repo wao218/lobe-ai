@@ -1,12 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 function HeroLeft(): JSX.Element {
+  const [index, setIndex] = useState(0);
+
+  const phrases = [
+    "identify plants",
+    "see gestures",
+    "count reps",
+    "feel emotions",
+    "sense colors",
+    "check safety",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  });
+
   return (
     <div className={styles.heroLeft}>
       <h1 className={styles.sectionHeading}>
         <span className={styles.heroTrainText}>Train apps to</span>
         <br />
-        <span className={styles.sectionHeadingGreen}>identify plants</span>
+        <span className={styles.sectionHeadingGreen}>{phrases[index]}</span>
       </h1>
       <p className={styles.sectionText}>
         <span>
