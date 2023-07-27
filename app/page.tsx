@@ -94,6 +94,35 @@ function HeroRight(): JSX.Element {
   );
 }
 
+function HeroArrow(): JSX.Element {
+  return (
+    <div className={styles.heroArrow} style={{ opacity: 1 }}>
+      <svg width="58px" height="24px" viewBox="0 0 58 24" version="1.1">
+        <title>See More</title>
+        <g
+          stroke="none"
+          strokeWidth="1"
+          fill="none"
+          fillRule="evenodd"
+          opacity="0.300000012"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <g
+            transform="translate(-771.000000, -986.000000)"
+            stroke="#000000"
+            strokeWidth="3"
+          >
+            <g transform="translate(771.000000, 986.000000)">
+              <polyline id="download-arrow" points="8 8 29 16 50 8"></polyline>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className={styles.content}>
@@ -102,6 +131,7 @@ export default function Home() {
           <HeroLeft />
           <HeroRight />
         </section>
+        <HeroArrow />
       </div>
     </main>
   );
